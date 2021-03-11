@@ -14,6 +14,9 @@ npm install --save-dev nodemon
 
 npm install dotenv --save
 
+npm install --save express-session
+
+npm install --save passport passport-jwt jsonwebtoken bcrypt-nodejs
 
 ### References
 https://medium.com/swlh/how-to-create-your-first-mern-mongodb-express-js-react-js-and-node-js-stack-7e8b20463e66
