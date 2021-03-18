@@ -1,5 +1,5 @@
 body {
-    background-color: #FFCC00;
+    background-color: #7F7D7E;
     padding: 20px;
     margin: 0;
   }
@@ -23,7 +23,7 @@ body {
     display: inline-block;
   }
   .content {
-    background-color: #FFF;
+    background-color: #ECECEC;
     padding: 20px;
   }
   .content h2 {
