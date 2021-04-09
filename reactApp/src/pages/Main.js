@@ -7,7 +7,6 @@ import LoginPage from "./loginPage";
 import SignUpPage from "./signUpPage";
 import Profile from "./ProfilePage";
 import PrivateRoute from "./privateRoute";
-import AuthHeader from "../components/authHeader";
 import AuthProvider from "../contexts/authContext";
 import SiteHeader from '../components/siteHeader';
 
@@ -17,7 +16,6 @@ class Main extends Component {
       return (
         <BrowserRouter>
           <AuthProvider>
-            <AuthHeader />
               <div>
               <h1>Fourth Year Project Blender Repo</h1>
               <SiteHeader />
