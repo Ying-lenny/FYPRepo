@@ -31,8 +31,10 @@ const LoginPage = props => {
       }}></input><br />
       {/* Login web form  */}
       <button onClick={login}>Log in</button>
-      <p>Not Registered?
-      <Link to="/signup">Sign Up!</Link></p>
+      <p>
+        Not Registered? &nbsp;
+        <Link to="/signup">Sign Up!</Link>
+      </p>
     </>
   );
 };

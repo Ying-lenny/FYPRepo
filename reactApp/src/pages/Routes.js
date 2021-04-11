@@ -11,13 +11,13 @@ import AuthProvider from "../contexts/authContext";
 import SiteHeader from '../components/siteHeader';
 
 
-class Main extends Component {
+class Routes extends Component {
     render() {
       return (
         <BrowserRouter>
           <AuthProvider>
               <div>
-              <h1>Fourth Year Project Blender Repo</h1>
+              <h1> PortFoliGO </h1>
               <SiteHeader />
                 <div className="content">
                     <Route exact path="/" component={Home}/>
@@ -34,4 +34,4 @@ class Main extends Component {
     }
   }
  
-export default Main;
+export default Routes;

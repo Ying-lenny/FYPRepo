@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import AuthHeader from "../authHeader";
+import "./index.css"
 
 const SiteHeader = () => {
     return (

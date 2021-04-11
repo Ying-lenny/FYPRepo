@@ -24,8 +24,8 @@ const SignUpPage = props => {
 
   return (
     <>
-      <h2>SignUp page</h2>
-      <p>You must register a username and password to log in </p>
+      <h2>Account Registration Page</h2>
+      <p>You must register a username and password to create an accoun to log into </p>
       <input value={userName} placeholder="user name" onChange={e => {
         setUserName(e.target.value);
       }}></input><br />

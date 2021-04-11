@@ -47,6 +47,6 @@ app.use(session({
     console.info(`Server running at ${port}`);
   });
 
-  if (process.env.SEED_DB) {
-    loadUsers();
-  }
+  // if (process.env.SEED_DB) {
+  //   loadUsers();
+  // }
