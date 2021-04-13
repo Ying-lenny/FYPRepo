@@ -17,7 +17,6 @@ class Routes extends Component {
         <BrowserRouter>
           <AuthProvider>
               <div>
-              <h1> PortFoliGO </h1>
               <SiteHeader />
                 <div className="content">
                     <Route exact path="/" component={Home}/>
