@@ -4,7 +4,7 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <h2>GOT QUESTIONS?</h2>
+        <h1 className="pageHeader">GOT QUESTIONS?</h1>
         <p>The easiest thing to do is ask
         </p>
       </div>

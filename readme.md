@@ -23,6 +23,10 @@ npm install firebase
 
 npm install framer-motion
 
+ npm install styled-components
+
+ npm install react-icons
+
 ### References
 https://medium.com/swlh/how-to-create-your-first-mern-mongodb-express-js-react-js-and-node-js-stack-7e8b20463e66
 

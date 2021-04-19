@@ -1,20 +1,36 @@
 /* eslint-disable */
 import React from "react";
-import { NavLink } from "react-router-dom";
 import AuthHeader from "../authHeader";
-import "./index.css"
+import {
+    Nav,
+    NavLink,
+    Bars,
+    NavMenu,
+  } from './siteHeaderElements';
+  import "./index.css"
 
 const SiteHeader = () => {
     return (
-        <div className="header" >
-            <ul>
-                <li><a className = "Logo"> PortFoliGO </a> </li>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-                <li><NavLink to="/profile">Profile</NavLink></li>
-                <li className ="account" > <AuthHeader/> </li>
-            </ul>
-        </div>
+            <Nav>
+                <NavLink to="/">
+                <img src={require('../../images/logo.png')} alt='logo' />
+                </NavLink>
+                <Bars/>
+                <NavMenu>
+                    <NavLink exact to="/" activeStyle>
+                        Home
+                    </NavLink>
+                    <NavLink to="/Contact" activeStyle>
+                        Contact
+                    </NavLink>
+                    <NavLink to="/Profile" activeStyle>
+                        Profile
+                    </NavLink>
+                </NavMenu>
+                <NavMenu>
+                    <li className ="account"> <AuthHeader/> </li>
+                </NavMenu>
+            </Nav>
         );
     };
 
