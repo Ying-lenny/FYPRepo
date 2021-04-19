@@ -7,7 +7,7 @@ function Home() {
 
     return (
       <div>
-        <h2>Hello and welcome to my homepage</h2>
+        <h1>Home</h1>
         <ImageGrid setSelectedImg={setSelectedImg}/>
         {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} /> }
       </div>

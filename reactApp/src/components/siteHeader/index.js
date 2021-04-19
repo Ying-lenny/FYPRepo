@@ -8,9 +8,8 @@ const SiteHeader = () => {
     return (
         <div className="header" >
             <ul>
-                <li> <a className = "Logo"> PortFoliGO </a> </li>
+                <li><a className = "Logo"> PortFoliGO </a> </li>
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/stuff">Account</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
                 <li><NavLink to="/profile">Profile</NavLink></li>
                 <li className ="account" > <AuthHeader/> </li>

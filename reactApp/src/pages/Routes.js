@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 import Home from "./Home";
-import Stuff from "./Stuff";
 import Contact from "./Contact";
 import LoginPage from "./loginPage";
 import SignUpPage from "./signUpPage";
@@ -22,7 +21,6 @@ class Routes extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/login" component={LoginPage} />
                     <Route path="/signup" component={SignUpPage} />
-                    <Route path="/stuff" component={Stuff}/>
                     <Route path="/contact" component={Contact}/>
                     <PrivateRoute path="/profile" component={Profile} />
                 </div>

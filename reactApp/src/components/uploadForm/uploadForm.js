@@ -20,8 +20,13 @@ const UploadForm = () => {
   };
 
     return (
+
         <form>
+          <h1>Click the button below to upload an image</h1>
+          <label>
             <input type="file" onChange={handleChange} />
+            <span>+</span>
+          </label>
             <div className="output">
                 { error && <div className="error">{ error }</div>}
                 { file && <div>{ file.name }</div> }
