@@ -1,21 +1,17 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import ImageGrid from "../components/ImageGrid/ImageGrid";
+import Modal from "../components/Modal/Modal";
  
-class Home extends Component {
-  render() {
+function Home() {
+  const [selectedImg, setSelectedImg] = useState(null);
+
     return (
       <div>
-        <h2>HELLO</h2>
-        <p>Cras facilisis urna ornare ex volutpat, et
-        convallis erat elementum. Ut aliquam, ipsum vitae
-        gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-        metus nec massa. Maecenas hendrerit laoreet augue
-        nec molestie. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus.</p>
- 
-        <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+        <h2>Hello and welcome to my homepage</h2>
+        <ImageGrid setSelectedImg={setSelectedImg}/>
+        {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} /> }
       </div>
     );
   }
-}
  
 export default Home;
