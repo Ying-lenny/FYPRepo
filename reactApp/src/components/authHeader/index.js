@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useContext } from "react";
 import { withRouter } from "react-router-dom";
 import { AuthContext } from "../../contexts/authContext";
