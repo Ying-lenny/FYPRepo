@@ -5,7 +5,6 @@ import bodyParser from 'body-parser';
 import './db';
 import usersRouter from './api/users'
 import {loadUsers} from './seedData'
-
 import session from 'express-session';
 import passport from './authenticate';
 

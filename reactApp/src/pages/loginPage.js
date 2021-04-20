@@ -21,7 +21,7 @@ const LoginPage = props => {
   }
   return (
     <>
-      <h1>Login page</h1>
+      <h1 className="pageHeader">Login page</h1>
       <p>You must log in to view the protected pages </p>
       <input id="username" placeholder="user name" onChange={e => {
         setUserName(e.target.value);

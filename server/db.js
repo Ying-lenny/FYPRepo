@@ -16,3 +16,5 @@ db.on('disconnected', () => {
 db.once('open', () => {
     console.log(`database connected to ${db.name} on ${db.host}`);
 })
+
+mongoose.set('useFindAndModify', false);

@@ -28,6 +28,11 @@ body {
     margin-bottom: 10px;
   }
 
+  /* Header Font Style */
+  .pageHeader {
+    text-align: center;
+  }
+
   /* upload form styles */
 form{
   margin: 30px auto 10px;
@@ -83,6 +88,7 @@ label:hover{
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   opacity: 0.8;
+  cursor: pointer;
 }
 .img-wrap img{
   min-width: 100%;
@@ -109,4 +115,5 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+  cursor: pointer;
 }

@@ -22,7 +22,7 @@ const UploadForm = () => {
     return (
 
         <form>
-          <h1>Click the button below to upload an image</h1>
+          <h1 className="pageHeader">Click the button below to upload an image</h1>
           <label>
             <input type="file" onChange={handleChange} />
             <span>+</span>
