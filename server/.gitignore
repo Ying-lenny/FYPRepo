@@ -2,5 +2,4 @@
 .DS_S*
 /**/.DS_S*
 /build
-.env
 /.vscode

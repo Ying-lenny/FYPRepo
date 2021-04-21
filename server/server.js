@@ -44,6 +44,10 @@ app.use(session({
   app.use('/api/users', usersRouter);
   app.use('/posts', postRoutes);
 
+  app.get('/', (req, res) => {
+    res.send('Hello to Memories API');
+  })
+
   app.listen(port, () => {
     console.info(`Server running at ${port}`);
   });
