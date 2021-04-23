@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UploadForm from "../components/uploadForm/uploadForm";
+import UploadForm from "../components/ImgUploadForm/uploadForm";
  
 class Profile extends Component {
   render() {

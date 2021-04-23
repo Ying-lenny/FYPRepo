@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import ProgressBar from '../ProgressBar/ProgressBar';
+import ProgressBar from '../ImgProgressBar/ProgressBar';
+import { Typography, Paper } from '@material-ui/core';
+
+import useStyles from './styles';
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const classes = useStyles();
 
   const types = ['image/png', 'image/jpeg'];
 
@@ -15,12 +20,22 @@ const UploadForm = () => {
       setError('');
     } else {
       setFile(null);
-      setError('Please select an image file (png or jpg)');
+      setError('Please select a valid image file type (png or jpg)');
     }
   };
 
+  if (!user?.result?.name) {
     return (
+      <Paper className={classes.paper}>
+        <Typography variant="h4" maxWidth="10%" align="center">
+          Please Sign In or register a new account to upload images 
+          <br/> from your machine to the gallery.
+        </Typography>
+      </Paper>
+    );
+  }
 
+    return (
         <form>
           <h1 className="pageHeader">Click the button below to upload an image</h1>
           <label className="image-form">

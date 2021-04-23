@@ -12,29 +12,6 @@ import {
   } from './siteHeaderElements';
   import "./index.css"
 
-{/* <Nav>
-                <NavLink to="/">
-                <img src={require('../../images/logo.png')} alt='logo' />
-                </NavLink>
-                <Bars/>
-                <NavMenu>
-                    <NavLink exact to="/" activeStyle>
-                        Home
-                    </NavLink>
-                    <NavLink to="/Contact" activeStyle>
-                        Contact
-                    </NavLink>
-                    <NavLink to="/Profile" activeStyle>
-                        Profile
-                    </NavLink>
-                </NavMenu>
-            </Nav> 
-        
-        <NavMenu>
-                    <li className ="account"> <AuthHeader/> </li>
-                </NavMenu>*/}
-
-
 import logo from '../../images/logo.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
@@ -77,6 +54,9 @@ const siteHeader = () => {
                 <NavMenu>
                     <NavLink exact to="/" activeStyle>
                         Home
+                    </NavLink>
+                    <NavLink to="/Gallery" activeStyle>
+                        Gallery
                     </NavLink>
                     <NavLink to="/Contact" activeStyle>
                         Contact
