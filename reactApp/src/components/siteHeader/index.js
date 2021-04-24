@@ -4,17 +4,22 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
-import {
-    Nav,
-    NavLink,
-    Bars,
-    NavMenu,
-  } from './siteHeaderElements';
-  import "./index.css"
+import { Nav, NavLink, Bars, NavMenu,} from './siteHeaderElements';
+import "./index.css"
 
 import logo from '../../images/logo.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
+
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+const font =  "'Sora', sans-serif";
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: font,
+    textTransform: "none"
+    }
+  });
 
 const siteHeader = () => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -50,28 +55,32 @@ const siteHeader = () => {
         <img className={classes.image} src={logo} alt="icon" height="60" />
         </div>
         <Nav>
-                <Bars/>
-                <NavMenu>
-                    <NavLink exact to="/" activeStyle>
-                        Home
-                    </NavLink>
-                    <NavLink to="/Gallery" activeStyle>
-                        Gallery
-                    </NavLink>
-                    <NavLink to="/Contact" activeStyle>
-                        Contact
-                    </NavLink>
-                    <NavLink to="/Profile" activeStyle>
-                        Profile
-                    </NavLink>
-                </NavMenu>
-            </Nav> 
+            <Bars/>
+            <NavMenu>
+                <NavLink exact to="/">
+                    About
+                </NavLink>
+                <NavLink to="/Gallery">
+                    Gallery
+                </NavLink>
+                <NavLink to="/Forum">
+                    Forum
+                </NavLink>
+                <NavLink to="/Profile">
+                    Profile
+                </NavLink>
+            </NavMenu>
+        </Nav> 
         
         <Toolbar className={classes.toolbar}>
         {user?.result ? (
             <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+
+            <ThemeProvider theme={theme}>
             <Typography className={classes.userName} color='#fff' variant="h6">{user?.result.name}</Typography>
+            </ThemeProvider>
+            
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
             </div>
         ) : (

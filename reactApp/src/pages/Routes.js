@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 
+import About from "./About";
 import Gallery from "./Gallery";
-import Contact from "./Contact";
+import Forum from "./Forum";
 import Profile from "./ProfilePage";
 import Auth from '../components/Auth/Auth';
 import SiteHeader from '../components/siteHeader/index';
+
 class Routes extends Component {
     render() {
       return (
@@ -13,9 +15,10 @@ class Routes extends Component {
               <div>
               <SiteHeader />
                 <div className="content">
-                    <Route exact path="/Gallery" component={Gallery}/>
+                    <Route exact path="/" component={About}/>
+                    <Route path="/Gallery" component={Gallery}/>
                     <Route path="/Auth" component={Auth} />
-                    <Route path="/contact" component={Contact}/>
+                    <Route path="/Forum" component={Forum}/>
                     <Route path="/profile" component={Profile} />
                 </div>
               </div>
