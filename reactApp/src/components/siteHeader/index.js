@@ -52,14 +52,14 @@ const siteHeader = () => {
     <AppBar className={classes.appBar} position="static" color="inherit">
         <ThemeProvider theme={theme}>
         <div className={classes.brandContainer}>
-        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">PortFoli<span className="myClass" style={{color: '#15cdfc'}} >GO</span></Typography>
+        <Typography component={Link} to="/" className={classes.heading} variant="h2" fontFamily= "'Sora', sans-serif" align="center">PortFoli<span className="myClass" style={{color: '#15cdfc'}} >GO</span></Typography>
         <img className={classes.image} src={logo} alt="icon" height="60" />
         </div>
         <Nav>
             <Bars/>
             <NavMenu>
                 <NavLink exact to="/">
-                    About
+                    Home
                 </NavLink>
                 <NavLink to="/Gallery">
                     Gallery
@@ -69,6 +69,8 @@ const siteHeader = () => {
                 </NavLink>
                 <NavLink to="/Profile">
                     Profile
+                </NavLink><NavLink to="/About">
+                    About
                 </NavLink>
             </NavMenu>
         </Nav> 

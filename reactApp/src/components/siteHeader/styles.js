@@ -10,10 +10,13 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     padding: '10px 50px',
     backgroundColor: '#000',
+    fontSize: '25px'
   },
   heading: {
     color: '#fff',
     textDecoration: 'none',
+    fontFamily: 'Sora, sans-serif',
+    fontSize: '60px'
   },
   image: {
     marginLeft: '15px',
