@@ -7,8 +7,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import "./index.css"
+
+//Images
+import Artist from '../../images/Artists.jpg'
+import Work from '../../images/Work.jpg'
+import Gallery from '../../images/Gallery.jpg'
+import Forum from '../../images/Forum.jpg'
 
 const HomeCards = () => {
+
+    const Imgheight = 190
 
     const useStyles = makeStyles({
     root: {
@@ -20,21 +29,22 @@ const HomeCards = () => {
     const classes = useStyles();
 
     return (
-        <component className='card-grid'>
+        <div className='card-grid'>
             <Card className={classes.root}>
                 {/*  First Card: For Artists  */}
                 <CardActionArea>
                     <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    height={Imgheight}
+                    image={Artist}
                     title="Contemplative Reptile"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        ARTIST?
                     </Typography>
+                    <br/>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                         across all continents except Antarctica
@@ -42,9 +52,6 @@ const HomeCards = () => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
                     <Button size="small" color="primary">
                     Learn More
                     </Button>
@@ -57,14 +64,15 @@ const HomeCards = () => {
                     <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    height={Imgheight}
+                    image={Work}
                     title="Contemplative Reptile"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        LOOKING/AVAILABLE FOR WORK?
                     </Typography>
+                    <br/>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                         across all continents except Antarctica
@@ -72,9 +80,6 @@ const HomeCards = () => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
                     <Button size="small" color="primary">
                     Learn More
                     </Button>
@@ -87,14 +92,15 @@ const HomeCards = () => {
                     <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    height={Imgheight}
+                    image={Gallery}
                     title="Contemplative Reptile"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        GALLERY?
                     </Typography>
+                    <br/>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                         across all continents except Antarctica
@@ -102,9 +108,6 @@ const HomeCards = () => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
                     <Button size="small" color="primary">
                     Learn More
                     </Button>
@@ -117,14 +120,15 @@ const HomeCards = () => {
                     <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    height={Imgheight}
+                    image={Forum}
                     title="Contemplative Reptile"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        FORUM?
                     </Typography>
+                    <br/>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                         across all continents except Antarctica
@@ -132,16 +136,12 @@ const HomeCards = () => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="/forum">
                     Learn More
                     </Button>
                 </CardActions>
             </Card>
-
-        </component>
+        </div>
     );
     
 }
