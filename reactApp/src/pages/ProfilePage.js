@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import UploadForm from "../components/ImgUploadForm/uploadForm";
+import { Container, Grow } from '@material-ui/core';
  
 class Profile extends Component {
   render() {
     return (
-      <div>
-        <UploadForm />
-      </div>
+      <Grow in>
+        <Container>
+          <div>
+            <UploadForm />
+          </div>
+          </Container>
+      </Grow>
     );
   }
 }

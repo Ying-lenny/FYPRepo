@@ -1,3 +1,4 @@
+//Holds consts used by many other files such as files from the actions and reducers folders
 export const CREATE = 'CREATE';
 export const UPDATE = 'UPDATE';
 export const DELETE = 'DELETE';

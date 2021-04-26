@@ -17,7 +17,7 @@ const font =  "'Sora', sans-serif";
 const theme = createMuiTheme({
   typography: {
     fontFamily: font,
-    textTransform: "none"
+    textTransform: "none",
     }
   });
 
@@ -50,6 +50,7 @@ const siteHeader = () => {
 
     return (
     <AppBar className={classes.appBar} position="static" color="inherit">
+        <ThemeProvider theme={theme}>
         <div className={classes.brandContainer}>
         <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">PortFoli<span className="myClass" style={{color: '#15cdfc'}} >GO</span></Typography>
         <img className={classes.image} src={logo} alt="icon" height="60" />
@@ -77,9 +78,8 @@ const siteHeader = () => {
             <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
 
-            <ThemeProvider theme={theme}>
+            
             <Typography className={classes.userName} color='#fff' variant="h6">{user?.result.name}</Typography>
-            </ThemeProvider>
             
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
             </div>
@@ -87,6 +87,7 @@ const siteHeader = () => {
             <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
         )}
         </Toolbar>
+        </ThemeProvider>
     </AppBar>
     );
 };

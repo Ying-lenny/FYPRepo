@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 
+import Homepage from "./Homepage";
 import About from "./About";
 import Gallery from "./Gallery";
 import Forum from "./Forum";
@@ -15,7 +16,8 @@ class Routes extends Component {
               <div>
               <SiteHeader />
                 <div className="content">
-                    <Route exact path="/" component={About}/>
+                    <Route exact path="/" component={Homepage}/>
+                    <Route path="/About" component={About}/>
                     <Route path="/Gallery" component={Gallery}/>
                     <Route path="/Auth" component={Auth} />
                     <Route path="/Forum" component={Forum}/>

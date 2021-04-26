@@ -14,12 +14,14 @@ const font =  "'Sora', sans-serif";
 const theme = createMuiTheme({
   typography: {
     fontFamily: font,
-    textTransform: "none"
+    textTransform: "none",
+    fontSize: 16,
     }
   });
     
 const Accordion = withStyles({
   root: {
+    color:'#000',
     border: '1px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
     '&:not(:last-child)': {
@@ -78,7 +80,10 @@ const AccordionDetails = withStyles((theme) => ({
             <br/>
             <br/>
             The goal of this project was to create a proof of concept web app which could serve as 
-            an online way for artists to store and present their work portfolio of work online. 
+            an online way for artists to store and present their work portfolio of work online.
+            <br/>
+            <br/>
+            See the sections on the Accordion below this for more detail about the other pages shown above in the app's header
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -88,9 +93,21 @@ const AccordionDetails = withStyles((theme) => ({
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            The concept for this page is to act as a homepage of sorts that people would see when first visiting the app.
+            <br/>
+            <br/>
+            When a user enters this page they are greeted with an array of images layed out in a grid. More can be uploaded by any user from within the Profile page
+            <br/>
+            This array of images is hosted on a google firebase cloud database and firestore.
+            <br/>
+            <br/>
+            For the sake of presentation, user details are already pre-existing within each file before they are uploaded onto the page.
+            <br/>
+            This was done because I was unable to implement functionality on the app for users to add their details to images as they upload and then display images properly
+            <br/>
+            <br/>
+            As of the completion of this project for the college deadliine, there is no way for users to delete images uploaded from the site itself
+            <br/>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -100,9 +117,14 @@ const AccordionDetails = withStyles((theme) => ({
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            The idea of this page was to allow for artists and other users alike to make posts on the site for potentail work offers or comission alerts
+            <br/>
+            <br/>
+            Before createing posts on this page, users must either register or sign into an account
+            <br/>
+            These posts and images are stored within the MongoDB Atlas database themselves and can be ediited by clicking the '...' at the top of the post
+            or deleted with the delete button on the bottom of the post.
+            <br/>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -112,9 +134,14 @@ const AccordionDetails = withStyles((theme) => ({
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            The original plan for this page was to serve as a profile page for users who had created an account.
+            <br/>
+            <br/>
+            However creating custom user profile pages proved more difficult than I was expecting and so did not make it into the app in really any shape or form.
+            <br/>
+            <br/>
+            Instead I relegated the functionality of uploading images to the gallery page to this page and put it behind the user registration system to give it some semblance of purpose  
+            <br/>
           </Typography>
         </AccordionDetails>
       </Accordion>
