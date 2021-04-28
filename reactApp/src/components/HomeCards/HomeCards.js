@@ -8,12 +8,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import "./index.css"
+import { Link as RouterLink } from 'react-router-dom'
+import Link from '@material-ui/core/Link'
 
 //Images
 import Artist from '../../images/Artists.jpg'
 import Work from '../../images/Work.jpg'
 import Gallery from '../../images/Gallery.jpg'
-import Forum from '../../images/Forum.jpg'
+import Info from '../../images/Info.jpg'
 
 const HomeCards = () => {
 
@@ -22,7 +24,7 @@ const HomeCards = () => {
     const useStyles = makeStyles({
     root: {
         maxWidth: 400,
-        height: 400
+        height: 360
     },
     });
 
@@ -30,63 +32,66 @@ const HomeCards = () => {
 
     return (
         <div className='card-grid'>
-            <Card className={classes.root}>
-                {/*  First Card: For Artists  */}
-                <CardActionArea>
-                    <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height={Imgheight}
-                    image={Artist}
-                    title="Contemplative Reptile"
-                    />
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        ARTIST?
-                    </Typography>
-                    <br/>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
+            <Link underline='none' component={RouterLink} to='/Auth'>
+                <Card className={classes.root}>
+                    {/*  First Card: For Artists  */}
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height={Imgheight}
+                        image={Artist}
+                        title="Contemplative Reptile"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            WISH TO JOIN UP?
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Create a new account or use an existing google account to join up.
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            Click here to start creating your account
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Link>
 
             {/*  Second Card: For Users  */}
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height={Imgheight}
-                    image={Work}
-                    title="Contemplative Reptile"
-                    />
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        LOOKING/AVAILABLE FOR WORK?
-                    </Typography>
-                    <br/>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
+            <Link underline='none' component={RouterLink} to='/Forum'>
+                <Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height={Imgheight}
+                        image={Work}
+                        title="Contemplative Reptile"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            LOOKING/AVAILABLE FOR WORK?
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Take a peek of the Post forum to see people looking for work or opening comssion slots. 
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            Feel free to create a post while you look
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Link>
 
             {/*  Thrid Card: To the Gallery  */}
+            <Link underline='none' component={RouterLink} to='/Gallery'>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -98,12 +103,40 @@ const HomeCards = () => {
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        GALLERY?
+                        HOW ABOUT THE GALLERY?
                     </Typography>
                     <br/>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Take a look at some of the art uploaded by other users like you
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    <Button size="small" color="primary">
+                        Don't by shy to share your creations
+                    </Button>
+                </CardActions>
+            </Card>
+            </Link>
+
+            {/*  Fourth Card: To the Forum  */}
+            <Link underline='none' component={RouterLink} to='/About'>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                    component="img"
+                    alt="AboutPageLink"
+                    height={Imgheight}
+                    image={Info}
+                    title="About Page Link"
+                    />
+                    <CardContent >
+                    <Typography gutterBottom variant="h5" component="h2">
+                        WHAT IS PORTFOLIGO?
+                    </Typography>
+                    <br/>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Learn more about what this PortFoliGo is through the about page
                     </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -113,34 +146,7 @@ const HomeCards = () => {
                     </Button>
                 </CardActions>
             </Card>
-
-            {/*  Fourth Card: To the Forum  */}
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height={Imgheight}
-                    image={Forum}
-                    title="Contemplative Reptile"
-                    />
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        FORUM?
-                    </Typography>
-                    <br/>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary" href="/forum">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
+            </Link>
         </div>
     );
     

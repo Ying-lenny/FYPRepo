@@ -67,9 +67,7 @@ const siteHeader = () => {
                 <NavLink to="/Forum">
                     Forum
                 </NavLink>
-                <NavLink to="/Profile">
-                    Profile
-                </NavLink><NavLink to="/About">
+                <NavLink to="/About">
                     About
                 </NavLink>
             </NavMenu>

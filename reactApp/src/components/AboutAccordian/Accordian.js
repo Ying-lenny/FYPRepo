@@ -96,7 +96,7 @@ const AccordionDetails = withStyles((theme) => ({
             The concept for this page is to act as a homepage of sorts that people would see when first visiting the app.
             <br/>
             <br/>
-            When a user enters this page they are greeted with an array of images layed out in a grid. More can be uploaded by any user from within the Profile page
+            When a user enters this page they are greeted with an array of images layed out in a grid. More can be uploaded by any user
             <br/>
             This array of images is hosted on a google firebase cloud database and firestore.
             <br/>
@@ -124,23 +124,6 @@ const AccordionDetails = withStyles((theme) => ({
             <br/>
             These posts and images are stored within the MongoDB Atlas database themselves and can be ediited by clicking the '...' at the top of the post
             or deleted with the delete button on the bottom of the post.
-            <br/>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography >Profile page: What is this page's purpose?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            The original plan for this page was to serve as a profile page for users who had created an account.
-            <br/>
-            <br/>
-            However creating custom user profile pages proved more difficult than I was expecting and so did not make it into the app in really any shape or form.
-            <br/>
-            <br/>
-            Instead I relegated the functionality of uploading images to the gallery page to this page and put it behind the user registration system to give it some semblance of purpose  
             <br/>
           </Typography>
         </AccordionDetails>
