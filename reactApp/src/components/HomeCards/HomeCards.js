@@ -32,6 +32,93 @@ const HomeCards = () => {
 
     return (
         <div className='card-grid'>
+             {/*  Fourth Card: To the Forum  */}
+             <Link underline='none' component={RouterLink} to='/About'>
+                <Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        alt="AboutPageLink"
+                        height={Imgheight}
+                        image={Info}
+                        title="About Page Link"
+                        />
+                        <CardContent >
+                        <Typography gutterBottom variant="h5" component="h2">
+                            WHAT IS PORTFOLIGO?
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Learn more about what this PortFoliGo is through the about page
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                        Learn More
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Link>
+
+            {/*  Second Card: For Users  */}
+            <Link underline='none' component={RouterLink} to='/Forum'>
+                <Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height={Imgheight}
+                        image={Work}
+                        title="Contemplative Reptile"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            AVAILABILITY OF/FOR WORK?
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Take a peek of the Post forum to see people looking for work or opening comssion slots. 
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            Feel free to create a post while you look
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Link>
+
+            {/*  Thrid Card: To the Gallery  */}
+            <Link underline='none' component={RouterLink} to='/Gallery'>
+                <Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height={Imgheight}
+                        image={Gallery}
+                        title="Contemplative Reptile"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            HOW ABOUT THE GALLERY?
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            See work uploaded by artists or upload your own work within this page if that's what you're into
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            The place to check for artists and clients
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Link>
+
             <Link underline='none' component={RouterLink} to='/Auth'>
                 <Card className={classes.root}>
                     {/*  First Card: For Artists  */}
@@ -61,95 +148,8 @@ const HomeCards = () => {
                 </Card>
             </Link>
 
-            {/*  Second Card: For Users  */}
-            <Link underline='none' component={RouterLink} to='/Forum'>
-                <Card className={classes.root}>
-                    <CardActionArea>
-                        <CardMedia
-                        component="img"
-                        alt="Contemplative Reptile"
-                        height={Imgheight}
-                        image={Work}
-                        title="Contemplative Reptile"
-                        />
-                        <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            LOOKING/AVAILABLE FOR WORK?
-                        </Typography>
-                        <br/>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Take a peek of the Post forum to see people looking for work or opening comssion slots. 
-                        </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary">
-                            Feel free to create a post while you look
-                        </Button>
-                    </CardActions>
-                </Card>
-            </Link>
-
-            {/*  Thrid Card: To the Gallery  */}
-            <Link underline='none' component={RouterLink} to='/Gallery'>
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height={Imgheight}
-                    image={Gallery}
-                    title="Contemplative Reptile"
-                    />
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        HOW ABOUT THE GALLERY?
-                    </Typography>
-                    <br/>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Take a look at some of the art uploaded by other users like you
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Don't by shy to share your creations
-                    </Button>
-                </CardActions>
-            </Card>
-            </Link>
-
-            {/*  Fourth Card: To the Forum  */}
-            <Link underline='none' component={RouterLink} to='/About'>
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia
-                    component="img"
-                    alt="AboutPageLink"
-                    height={Imgheight}
-                    image={Info}
-                    title="About Page Link"
-                    />
-                    <CardContent >
-                    <Typography gutterBottom variant="h5" component="h2">
-                        WHAT IS PORTFOLIGO?
-                    </Typography>
-                    <br/>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Learn more about what this PortFoliGo is through the about page
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
-            </Link>
         </div>
     );
-    
 }
 
 export default HomeCards

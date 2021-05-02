@@ -39,7 +39,7 @@ const UploadForm = () => {
       <ThemeProvider theme={theme}>
       <Paper className={classes.paper}>
         <Typography variant="h4" align="center">
-          Please Sign In or register a new account to upload images from your machine to the gallery.
+          Artists: Please sign in or register a new account to upload images from your machine to the gallery.
         </Typography>
       </Paper>
       </ThemeProvider>
@@ -48,7 +48,7 @@ const UploadForm = () => {
 
     return (
         <form>
-          <h1 className="pageHeader">Click the button below to upload an image from your machine</h1>
+          <h1 className="pageHeader">Artists: Click the button below to upload an image from your machine</h1>
           <label className="image-form">
             <input type="file" onChange={handleChange} />
             <span>+</span>

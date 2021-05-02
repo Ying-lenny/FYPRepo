@@ -12,6 +12,8 @@ function Gallery() {
           <div>
             <h1 className="pageHeader">Image Gallery</h1>
             <UploadForm />
+            <br/>
+            <h1 className="pageHeader">Clients: Click an image below to see the full image and user details</h1>
             <ImageGrid setSelectedImg={setSelectedImg}/>
             {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} /> }
           </div>
